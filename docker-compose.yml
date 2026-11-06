@@ -1,0 +1,13 @@
+services:
+  flutter:
+    build:
+      context: .
+      dockerfile: docker/flutter/Dockerfile
+    container_name: taskflow_flutter
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8083:8080"
+    stdin_open: true
+    tty: true
